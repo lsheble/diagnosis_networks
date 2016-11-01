@@ -4,8 +4,6 @@ Created on Tue Jun 21 12:04:13 2016
 
 @author: sheble
 
-For some reason, am not able to fillna.... have dropped for now, will return.
-
 ### THIS MERGES OBSERVED ('occurs') AND EXPECTED VALUES FOR EACH DEMO GROUP
 
 """
