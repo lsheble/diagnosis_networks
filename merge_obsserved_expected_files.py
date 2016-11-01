@@ -24,8 +24,8 @@ for file_ in os.listdir(observed):
     df2.columns=['target', 'source', 'expected']
     df2.target = df2.target.astype(str)
     df2.source = df2.source.astype(str)
-    df1.target = df2.target.astype(str)
-    df1.source = df2.source.astype(str)
+    df1.target = df1.target.astype(str)
+    df1.source = df1.source.astype(str)
     df1 = pd.merge(df1, df2, how='left', on=['source', 'target'])
     # fill_value = df1['expected'].min(): this is generally 0.005 since 200 permutations were run...
     # print(fill_value)
