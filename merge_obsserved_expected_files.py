@@ -36,7 +36,8 @@ for file_ in os.listdir(observed):
     dlist[2]=dlist[2].strip('.csv')
 #    df1['age']=float(dlist[2])
     df1['age']=dlist[2]
-    df1['weight']=((df1['occurs']-df1['expected'])*(df1['occurs']-df1['expected']))/df1['expected']
+#    df1['weight']=((df1['occurs']-df1['expected'])*(df1['occurs']-df1['expected']))/df1['expected']
+    df1['weight'] = (df1['occurs']/df1['expected'])
     df1 = df1[['source', 'target', 'occurs', 'expected', 'weight', 'gender', 'race_ethn', 'age']]
     save_path = os.path.join(oe_demo, file_)
     df1.to_csv(str(save_path), header=True, index=False)
