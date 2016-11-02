@@ -29,7 +29,7 @@ big_frame = big_frame[(big_frame['observed']>5) & (big_frame['weight']>=2)]
 #big_frame.columns = ['source', 'target', 'weight', 'gender', 'race_ethn', 'age']
 #big_frame.to_csv('data/diag_edges_normed_weight.csv', header=True, index=False)  
 big_frame.to_csv('data/diag_edges_observed_expected_weight_compressed.gzip', header=True, index=False, compression='gzip')
-print('There are ' + str(len(big_frame)) + 'records in the dataframe.\n')
+print('There are ' + str(len(big_frame)) + ' records in the dataframe.\n')
 
 
 big_frame_5000 = big_frame[:5000]
