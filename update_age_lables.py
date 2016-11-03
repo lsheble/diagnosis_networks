@@ -22,7 +22,7 @@ df_age = pd.DataFrame(df['age'].str.split('-').tolist(), columns=['age_lower', '
 df=df.join(df_age)
 df.head()
 
-pd.crosstab(df.age, [df.age_lower, df.age_upper], rownames=['age'], colnames=['age_lower', 'age_upper'])
+age_values = pd.crosstab(df.age, [df.age_lower, df.age_upper], rownames=['age'], colnames=['age_lower', 'age_upper'])
 
 df['weight']=df['weight'].round(3)
 df['expected']=df['expected'].round(3)
